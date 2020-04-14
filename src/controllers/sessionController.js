@@ -4,17 +4,20 @@ module.exports = {
         const {email,senha} = req.body;
 
 
-        const pds = await connection('pds')
+        const user = await connection('user')
             .where({email:email, senha:senha})
             .select('*')
             .first();
 
-
-        if(!pds){
-            return res.status(400).json({error: 'No ong found with this ID'})
+        if(!user){
+            return res.status(400).json({error: 'Not found'})
         }
 
-        return res.json(pds);
+    
+        return res.json(user);
+        
+
+       
     }
 
 }
