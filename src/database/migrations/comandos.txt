@@ -1,0 +1,14 @@
+tdos os metodos knex
+    npx knex 
+
+Criar arquivo de migration
+    npx knex migrate:make nomeDoQueVaiFazer
+
+criar tabela no banco (esse método vai gerar todas as tabelasfeitas nas migrations)
+    npx knex migrate:latest
+
+executar metodo down (desfazer a ultima migration)
+    npx knex migrate:rollback
+
+mostrar todas as migrations que foram executadas
+    npx knex migrate:status
