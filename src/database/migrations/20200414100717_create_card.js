@@ -5,6 +5,8 @@ exports.up = function(knex) {
         table.string('agencia');
         table.string('numeroConta');
         table.string('id_user');
+
+        table.foreign('id_user').references('user.id');
         
     })
 };

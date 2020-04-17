@@ -4,6 +4,7 @@ exports.up = function(knex) {
         table.string('id').primary();
         table.string('tipo');
         table.string('nomeCompleto').notNullable();
+        table.string('pontos');
         table.string('RG').notNullable();
         table.string('CPF').notNullable();
         table.string('dataNascimento').notNullable();

@@ -6,13 +6,13 @@ module.exports = {
 
         const user = await connection('user')
             .where({email:email, senha:senha})
-            .select('*')
+            .select('tipo','nomeCompleto','dataNascimento','genero','cidade','UF','rua','cep','telefone')
             .first();
 
         if(!user){
             return res.status(400).json({error: 'Not found'})
         }
-
+        
     
         return res.json(user);
         
