@@ -2,8 +2,9 @@ import React,{useState} from 'react';
 import { FiLogIn } from 'react-icons/fi' // feather icons
 import { FiLock } from 'react-icons/fi' // feather icons
 import './styles.css';
-import dogImg from '../../assets/image 2.png';
 import logo from '../../assets/logo.png';
+
+
 export default function Login() {
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
