@@ -1,39 +1,37 @@
 import styled from 'styled-components';
+import {Form} from '@unform/web';
 //ex: font-size: &{props => props.fontSize}
+
+
+export const Title = styled.h1`
+    margin-top: 20px;
+    color: #7D7D7D;
+    span{
+        color: #00938E;
+    }
+`;
+export const SectionTitle = styled.h1`
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-left: -10px;
+    span{
+        color: #00938E;
+    }
+`;
+
 export const Container = styled.div`
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:center;
     background-color: #EFEFEF;
-    h1{
-       margin-top: 20px;
-    }
-    span{
-        color: #00938E;
-    }
-`;
-export const Formulario = styled.form`
-    display:flex;
-    flex-direction:row;
-    h1{
-        margin-bottom: 10px;
-        font-size: 13px;
-        margin-left: -15px;
-    }
-  
-    span{
-        color: #00938E;
-    }
-    br{
-        width: 100%;
-    }
-
+    
+    
 `;
 export const DadosPessoais = styled.section`
-    margin: 20px;
+    margin-top: 20px;
     margin-right: 50px;
-    
+   
     Input{
         margin-bottom:10px;
     }
@@ -44,9 +42,22 @@ export const DadosPessoais = styled.section`
     }
     
 `;
-
+export const Formulario = styled(Form)`
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:center;
+    div{
+        display:flex;
+        flex-direction:row;
+    }
+    @media (max-width: 800px) {
+        flex-direction: column;
+    }
+`
+    
 export const DadosContato = styled.section`
-    margin-top:20px;
+    margin-top: 20px;
     margin-left: 50px;
     display:flex;
     flex-direction:column;
@@ -56,7 +67,7 @@ export const DadosContato = styled.section`
     }
 `;
 export const DadosBancarios = styled.section`
-    margin-top: -34px; 
+    margin-top: -20px;
     margin-left: 50px;
     display:flex;
     flex-direction:column;
@@ -64,6 +75,7 @@ export const DadosBancarios = styled.section`
     div{
         display:flex;
         flex-direction:row;
+        justify-content: space-between;
     }
     Input{
         margin-bottom:10px;
@@ -71,40 +83,24 @@ export const DadosBancarios = styled.section`
 `;
 
 export const ConexaoSite = styled.section`
-    margin-top: -34px; 
+    margin-top: -20px;
     margin-left: 50px;
     display:flex;
     flex-direction:column;
+    div{
+        display:flex;
+        flex-direction:row;
+        justify-content: space-between;
+    }
     Input{
         margin-bottom:10px;
     }
 `;
-
-export const DivEsq = styled.div`
+export const Servicos = styled.ul`
     display:flex;
-`;
-
-export const DivDir = styled.div`
-    display:flex;
-    flex-direction:column;
-`;
-
-export const Servicos = styled.section`
-        width: 100%;
-        display:flex;
-        flex-direction:column;
-        align-items: center;
-        border-top: 1px solid #cccccc;
-        h1{
-            margin-top: 20px;
-            color: #7D7D7D;
-        }
-        ul{
-            display:flex;
-            flex-direction:row;
-            justify-content:space-around;
-        }
-        li{
+    flex-direction:row;
+    justify-content:space-around;
+    li{
             display:flex;
             flex-direction:column;
             align-items:center;
@@ -116,20 +112,22 @@ export const Servicos = styled.section`
                 justify-content: center;
             }
             img{
-                width: 70px;
-                height: 70px;
+                width: 80px;
+                height: 80px;
                 margin: 20px;
-
-                :hover{
-                    width: 75px;
-                    height: 75px;
-                
-                }
             }
             p{
                 color: #01D2A7;
             }
         }
+`;
+export const SectionServicos = styled.section`
+        width: 100%;
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        border-top: 1px solid #cccccc;
+        
 `;
 
 export const Link = styled.div`
@@ -145,6 +143,7 @@ export const Link = styled.div`
         :hover{
             color:#00ADA7;
             font-size:16px;
+            
         }
     }
 `;

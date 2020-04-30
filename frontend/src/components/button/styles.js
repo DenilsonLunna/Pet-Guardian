@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const Btn = styled.button`
-        width: 200px;
-        height: 40px;
-        border-radius: 20px;
+        width: 250px;
+        height: 50px;
+        border-radius: 25px;
         background: #01D2A7;
         border: 1px solid #01D2A7;
         color: #ffffff;
